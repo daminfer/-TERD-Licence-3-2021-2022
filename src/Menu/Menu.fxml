@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="406.0" prefWidth="650.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Pane prefHeight="366.0" prefWidth="451.0">
+      <VBox fx:id="sceneProfil" alignment="CENTER" prefHeight="366.0" prefWidth="610.0" visible="false">
+
+            <Pane focusTraversable="true" prefHeight="393.0" prefWidth="336.0">
+
+                  <Pane fx:id="paneCreeProfil" layoutX="298.0" prefHeight="366.0" prefWidth="315.0" visible="false">
+
+                        <Button fx:id="creeProfil" layoutX="108.0" layoutY="186.0" mnemonicParsing="false" onAction="#onCreeProfilClick" prefHeight="30.0" prefWidth="92.0" text="CreerProfil" />
+                        <Label layoutX="14.0" layoutY="35.0" text="Nom Profil:" />
+                        <Label layoutX="9.0" layoutY="82.0" text="Nb_Niveaux:" />
+                        <Label layoutX="14.0" layoutY="132.0" text="Nb_Cartes:" />
+                        <TextField fx:id="nomProfil" layoutX="89.0" layoutY="32.0" prefHeight="26.0" prefWidth="108.0" promptText="new_profil" text="" />
+                        <TextField fx:id="nbNivProfil" layoutX="89.0" layoutY="78.0" prefHeight="26.0" prefWidth="108.0" promptText="5" text="" />
+                        <TextField fx:id="nbCartesProfil" layoutX="89.0" layoutY="128.0" prefHeight="26.0" prefWidth="108.0" promptText="5" text="" />
+
+                  </Pane>
+                  <Pane layoutX="6.0" prefHeight="366.0" prefWidth="276.0">
+
+                        <Button layoutX="21.0" layoutY="79.0" mnemonicParsing="false" onAction="#onNewProfilClick" prefHeight="30.0" prefWidth="130.0" text="Creer un Profil " />
+                        <Button layoutX="21.0" layoutY="187.0" mnemonicParsing="false" onAction="#onChooseProfile" prefHeight="30.0" prefWidth="130.0" text="Choisir un Profil" />
+                        <Label alignment="BOTTOM_LEFT" layoutX="22.0" layoutY="12.0" text="Profils:" />
+
+                  </Pane>
+                  <Pane fx:id="infoprofil" layoutX="298.0" layoutY="19.0" prefHeight="211.0" prefWidth="306.0" visible="false">
+
+                        <Button layoutX="14.0" layoutY="156.0" mnemonicParsing="false" onAction="#okchooseprofil" prefHeight="30.0" prefWidth="44.0" text="OK" />
+                        <Label layoutX="14.0" layoutY="14.0" text="profil selectionné:" />
+                        <Label fx:id="profiltext" layoutX="14.0" layoutY="38.0" text="  " />
+
+                  </Pane>
+
+            </Pane>
+
+      </VBox>
+      <VBox fx:id="Acceuil" prefHeight="366.0" prefWidth="610.0">
+
+            <Pane prefHeight="381.0" prefWidth="610.0">
+
+            
+                    <Button layoutX="14.0" layoutY="216.0" mnemonicParsing="false" onAction="#onEDTClick" prefHeight="30.0" prefWidth="154.0" text="Emplois du temps" />
+                    <Button fx:id="Repesp" layoutX="14.0" layoutY="264.0" mnemonicParsing="false" onAction="#RepEspClick" prefHeight="30.0" prefWidth="154.0" text="Répétition espacée" />
+                    <Button layoutX="14.0" layoutY="313.0" mnemonicParsing="false" onAction="#onOptionClick" prefHeight="30.0" prefWidth="154.0" text="Gestion Profils" />
+                  <Label fx:id="Welcometext" alignment="TOP_CENTER" layoutY="32.0" prefHeight="47.0" prefWidth="610.0" text="MENU" />
+            <Button layoutX="14.0" layoutY="168.0" mnemonicParsing="false" onAction="#onEditeurClick" prefHeight="30.0" prefWidth="154.0" text="Editeur" />
+            <ImageView fitHeight="183.0" fitWidth="306.0" layoutX="304.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/logo.png" />
+               </image>
+            </ImageView>
+
+
+            </Pane>
+
+      </VBox>
+
+    </Pane>
+
+</VBox>

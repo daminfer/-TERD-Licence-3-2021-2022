@@ -1,0 +1,4 @@
+<recto%>
+question 4
+<verso%>
+reponse 4

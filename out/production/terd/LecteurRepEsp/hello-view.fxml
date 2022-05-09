@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="406.0" prefWidth="650.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"  >
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Pane>
+
+         <VBox fx:id="Acceuil" alignment="CENTER" layoutX="-1.0" prefHeight="366.0" prefWidth="610.0">
+
+                  <Pane prefHeight="283.0" prefWidth="610.0">
+                      <Label fx:id="welcomeText" alignment="TOP_CENTER" layoutX="-2.0" layoutY="38.0" prefHeight="42.0" prefWidth="610.0" text="Repetition Espacee" />
+                      <Button mnemonicParsing="false" onAction="#retourmenu" prefHeight="24.0" prefWidth="34.0" text="&lt;" />
+                  </Pane>
+               <Pane prefHeight="82.0" prefWidth="610.0">
+            
+                         <Button alignment="CENTER" contentDisplay="CENTER" layoutY="26.0" onAction="#onAjoutDeckClick" prefHeight="31.0" prefWidth="80.0" text="AddDecks">
+                        <font>
+                           <Font size="12.0" />
+                        </font>
+                     </Button>
+                     <Button alignment="CENTER" contentDisplay="CENTER" layoutX="530.0" layoutY="26.0" onAction="#onStartClick" prefHeight="31.0" prefWidth="80.0" text="Start" />
+            
+                  </Pane>
+      
+            </VBox>
+      <VBox fx:id="StartQuestion" alignment="CENTER" prefHeight="366.0" prefWidth="610.0" visible="false">
+
+            <Pane prefHeight="370.0" prefWidth="610.0">
+
+                  <Pane layoutX="1.0" layoutY="-1.0" prefHeight="298.0" prefWidth="610.0">
+
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff7bd" height="254.0" layoutX="25.0" layoutY="44.0" stroke="BLACK" strokeType="INSIDE" width="562.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff8bbdb" height="31.0" layoutX="25.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="108.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff8bbdb" height="31.0" layoutX="25.0" layoutY="44.0" stroke="BLACK" strokeType="INSIDE" width="108.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff8bbdb" height="31.0" layoutX="132.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="455.0" />
+                        <Label fx:id="nomdeck" layoutX="139.0" layoutY="9.0" prefHeight="26.0" prefWidth="108.0" text="Deck: " />
+                        <Label fx:id="nomniveau" layoutX="34.0" layoutY="9.0" prefHeight="26.0" prefWidth="92.0" text="Niveau: " />
+                        <Label fx:id="nomcarte" layoutX="34.0" layoutY="47.0" prefHeight="26.0" prefWidth="92.0" text="Carte: " />
+                        <Label fx:id="QuestionReponse" alignment="TOP_LEFT" layoutX="34.0" layoutY="84.0" prefHeight="203.0" prefWidth="541.0" text="Affichage Recto/Verso" />
+
+                  </Pane>
+
+            </Pane>
+         <Pane prefHeight="142.0" prefWidth="302.0">
+
+                     <Pane fx:id="autoEvalPane" layoutX="26.0" prefHeight="69.0" prefWidth="562.0">
+                         <Button fx:id="Vraib" layoutY="5.0" mnemonicParsing="false" onAction="#Vraibutton" prefHeight="24.0" prefWidth="56.0" text="Vrai" />
+                         <Button fx:id="Fauxb" layoutX="512.0" layoutY="5.0" mnemonicParsing="false" onAction="#Fauxbutton" text="Faux" />
+                         <Label fx:id="reponsedonnee" alignment="TOP_LEFT" layoutX="74.0" layoutY="-1.0" prefHeight="69.0" prefWidth="423.0" text="reponse donnée" />
+   
+                     </Pane>
+                     <Pane fx:id="entrerReponsePane" layoutX="25.0" prefHeight="69.0" prefWidth="562.0" visible="false">
+   
+                           <TextArea fx:id="entrerReponse" layoutY="3.0" prefHeight="69.0" prefWidth="315.0" promptText="Ecrivez votre reponse" />
+                           <Button fx:id="Validerb" layoutX="327.0" layoutY="14.0" mnemonicParsing="false" onAction="#Validerbutton" text="Valider" />
+   
+                     </Pane>
+
+         </Pane>
+
+      </VBox>
+
+   </Pane>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</VBox>
